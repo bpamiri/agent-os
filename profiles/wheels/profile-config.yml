@@ -1,0 +1,8 @@
+inherits_from: false
+
+# Wheels profile - standalone copy of default
+# Extended with: UI design phase (design-ui command, ui-designer agent)
+#
+# This profile adds a /design-ui command that creates DaisyUI-based
+# HTML mockups and data contracts for server-rendered applications.
+# The design-ui phase slots between /write-spec and /create-tasks.
