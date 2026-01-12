@@ -420,6 +420,7 @@ perform_installation() {
             fi
             install_claude_code_skills
             install_improve_skills_command
+            install_profile_skills
         fi
 
         # Install agent-os commands if enabled
@@ -455,6 +456,7 @@ perform_installation() {
             fi
             install_claude_code_skills
             install_improve_skills_command
+            install_profile_skills
             echo ""
         fi
 

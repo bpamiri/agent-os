@@ -1466,3 +1466,69 @@ install_improve_skills_command() {
         fi
     fi
 }
+
+# Install standalone profile skills (skills not generated from standards)
+# These are pre-built skills in profiles/[profile]/skills/
+install_profile_skills() {
+    # Only install if Claude Code commands are enabled
+    if [[ "$EFFECTIVE_CLAUDE_CODE_COMMANDS" != "true" ]]; then
+        return 0
+    fi
+
+    local profile_skills_dir="$BASE_DIR/profiles/$EFFECTIVE_PROFILE/skills"
+
+    # Check if profile has a skills directory
+    if [[ ! -d "$profile_skills_dir" ]]; then
+        print_verbose "No skills directory found in profile: $EFFECTIVE_PROFILE"
+        return 0
+    fi
+
+    if [[ "$DRY_RUN" != "true" ]]; then
+        print_status "Installing profile skills..."
+    fi
+
+    local skills_count=0
+    local dest_dir="$PROJECT_DIR/.claude/skills"
+    ensure_dir "$dest_dir"
+
+    # Copy each skill directory
+    for skill_dir in "$profile_skills_dir"/*/; do
+        if [[ -d "$skill_dir" ]]; then
+            local skill_name=$(basename "$skill_dir")
+            local dest_skill_dir="$dest_dir/$skill_name"
+
+            if [[ "$DRY_RUN" == "true" ]]; then
+                # Track the skill file for dry run
+                INSTALLED_FILES+=("$dest_skill_dir/SKILL.md")
+            else
+                # Copy the entire skill directory
+                cp -r "$skill_dir" "$dest_dir/"
+                print_verbose "Copied skill: $skill_name"
+            fi
+            ((skills_count++)) || true
+        fi
+    done
+
+    # Copy README and quick-start if present
+    if [[ -f "$profile_skills_dir/README.md" ]]; then
+        if [[ "$DRY_RUN" == "true" ]]; then
+            INSTALLED_FILES+=("$dest_dir/README.md")
+        else
+            cp "$profile_skills_dir/README.md" "$dest_dir/"
+        fi
+    fi
+
+    if [[ -f "$profile_skills_dir/SKILLS-QUICK-START.md" ]]; then
+        if [[ "$DRY_RUN" == "true" ]]; then
+            INSTALLED_FILES+=("$dest_dir/SKILLS-QUICK-START.md")
+        else
+            cp "$profile_skills_dir/SKILLS-QUICK-START.md" "$dest_dir/"
+        fi
+    fi
+
+    if [[ "$DRY_RUN" != "true" ]]; then
+        if [[ $skills_count -gt 0 ]]; then
+            print_success "Installed $skills_count profile skills"
+        fi
+    fi
+}
