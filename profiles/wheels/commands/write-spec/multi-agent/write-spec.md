@@ -18,5 +18,5 @@ Your spec.md is ready!
 
 ✅ Spec document created: `[spec-path]`
 
-NEXT STEP 👉 Run `/create-tasks` to generate your tasks list for this spec.
+NEXT STEP 👉 Run `/agent-os:create-tasks` to generate your tasks list for this spec.
 ```

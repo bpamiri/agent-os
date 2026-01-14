@@ -6,7 +6,7 @@ IF you don't have ONE OR BOTH of those files in your current conversation contex
 
 "I'll need a spec.md or requirements.md (or both) in order to build a tasks list.
 
-Please direct me to where I can find those.  If you haven't created them yet, you can run /shape-spec or /write-spec."
+Please direct me to where I can find those.  If you haven't created them yet, you can run /agent-os:shape-spec or /agent-os:write-spec."
 
 {{UNLESS compiled_single_command}}
 ## Display confirmation and next step

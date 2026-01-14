@@ -18,3 +18,7 @@ Implement all tasks assigned to you and ONLY those task(s) that have been assign
 - IF your task involves user-facing UI, and IF you have access to browser testing tools, open a browser and use the feature you've implemented as if you are a user to ensure a user can use the feature in the intended way.
   - Take screenshots of the views and UI elements you've tested and store those in `agent-os/specs/[this-spec]/verification/screenshots/`.  Do not store screenshots anywhere else in the codebase other than this location.
   - Analyze the screenshot(s) you've taken to check them against your current requirements.
+
+## After completing all tasks:
+- Suggest to the user: **Run `/agent-os:browser-feature-test [feature-name]`** to perform comprehensive end-to-end browser testing of the implemented feature.
+- This will test all CRUD operations, menu routes, UX interactions, and generate a GIF recording for documentation.

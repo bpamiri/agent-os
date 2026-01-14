@@ -11,7 +11,7 @@ The tasks list has created at `agent-os/specs/[this-spec]/tasks.md`.
 
 Review it closely to make sure it all looks good.
 
-NEXT STEP 👉 Run `/implement-tasks` (simple, effective) or `/orchestrate-tasks` (advanced, powerful) to start building!
+NEXT STEP 👉 Run `/agent-os:implement-tasks` (simple, effective) or `/agent-os:orchestrate-tasks` (advanced, powerful) to start building!
 ```
 
 {{UNLESS standards_as_claude_code_skills}}

@@ -16,9 +16,9 @@ IF you don't already know which spec we're working on and IF that spec folder do
 Please point me to a spec's `tasks.md` that you want to orchestrate implementation for.
 
 If you don't have one yet, then run any of these commands first:
-/shape-spec
-/write-spec
-/create-tasks
+/agent-os:shape-spec
+/agent-os:write-spec
+/agent-os:create-tasks
 ```
 
 ### NEXT: Create orchestration.yml to serve as a roadmap for orchestration of task groups
@@ -235,3 +235,25 @@ Input those prompts into this chat one-by-one or queue them to run in order.
 Progress will be tracked in `agent-os/specs/[this-spec]/tasks.md`
 ```
 {{ENDUNLESS use_claude_code_subagents}}
+
+### FINALLY: Run comprehensive browser testing
+
+After ALL task groups have been implemented, suggest to the user:
+
+```
+All task groups have been implemented!
+
+RECOMMENDED: Run `/agent-os:browser-feature-test [feature-name]` to perform comprehensive end-to-end browser testing.
+
+This will:
+- Test all CRUD operations (Create, Read, Update, Delete)
+- Verify menu routes and navigation
+- Test UX interactions (forms, dropdowns, modals)
+- Create sample records for testing
+- Generate a GIF recording for documentation
+- Produce a detailed test report
+
+Would you like me to run the browser feature test now?
+```
+
+If the user agrees, run `/agent-os:browser-feature-test` with the feature name.

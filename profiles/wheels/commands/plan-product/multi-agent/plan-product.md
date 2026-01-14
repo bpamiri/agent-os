@@ -32,5 +32,5 @@ Your product planning is all set!
 ✅ Product roadmap: `agent-os/product/roadmap.md`
 ✅ Product tech stack: `agent-os/product/tech-stack.md`
 
-NEXT STEP 👉 Run `/shape-spec` or `/write-spec` to start work on a feature!
+NEXT STEP 👉 Run `/agent-os:shape-spec` or `/agent-os:write-spec` to start work on a feature!
 ```

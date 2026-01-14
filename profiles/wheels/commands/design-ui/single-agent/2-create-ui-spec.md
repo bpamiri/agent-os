@@ -21,7 +21,7 @@ Created in `agent-os/specs/[this-spec]/ui/`:
 
 Review the mockups to ensure they match your vision.
 
-NEXT STEP: Run `/create-tasks` to generate your tasks list, which will now include UI implementation tasks.
+NEXT STEP: Run `/agent-os:create-tasks` to generate your tasks list, which will now include UI implementation tasks.
 ```
 
 {{UNLESS standards_as_claude_code_skills}}

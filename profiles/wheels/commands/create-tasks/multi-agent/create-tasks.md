@@ -13,7 +13,7 @@ IF you don't have ONE OR BOTH of those files in your current conversation contex
 ```
 I'll need a spec.md or requirements.md (or both) in order to build a tasks list.
 
-Please direct me to where I can find those.  If you haven't created them yet, you can run /shape-spec or /write-spec.
+Please direct me to where I can find those.  If you haven't created them yet, you can run /agent-os:shape-spec or /agent-os:write-spec.
 ```
 
 ## PHASE 2: Create tasks.md
@@ -36,5 +36,5 @@ Your tasks list ready!
 
 ✅ Tasks list created: `agent-os/specs/[this-spec]/tasks.md`
 
-NEXT STEP 👉 Run `/implement-tasks` (simple, effective) or `/orchestrate-tasks` (advanced, powerful) to start building!
+NEXT STEP 👉 Run `/agent-os:implement-tasks` (simple, effective) or `/agent-os:orchestrate-tasks` (advanced, powerful) to start building!
 ```

@@ -6,7 +6,7 @@ You are creating user interface specifications for a feature spec. This command 
 
 First, identify which spec folder to design UI for:
 
-1. **If spec name provided with command** (e.g., `/design-ui inventory-management`):
+1. **If spec name provided with command** (e.g., `/agent-os:design-ui inventory-management`):
    - Search for matching folder in `agent-os/specs/`
    - Use partial matching on the feature name portion
 
@@ -23,8 +23,8 @@ If you cannot find a spec folder, output:
 I couldn't find a spec to design UI for.
 
 Please either:
-1. Provide the spec name: `/design-ui [feature-name]`
-2. Run `/write-spec` first to create your spec.md
+1. Provide the spec name: `/agent-os:design-ui [feature-name]`
+2. Run `/agent-os:write-spec` first to create your spec.md
 ```
 
 ## PHASE 2: Create UI Specification
@@ -60,5 +60,5 @@ Contents:
 
 Review the mockups to ensure they match your vision.
 
-NEXT STEP: Run `/create-tasks` to generate implementation tasks.
+NEXT STEP: Run `/agent-os:create-tasks` to generate implementation tasks.
 ```

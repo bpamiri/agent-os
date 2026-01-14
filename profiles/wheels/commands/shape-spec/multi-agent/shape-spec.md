@@ -48,5 +48,5 @@ Spec shaping is complete!
 ✅ Requirements gathered
 ✅ Visual assets: [Found X files / No files provided]
 
-NEXT STEP 👉 Run `/write-spec` to generate the detailed specification document.
+NEXT STEP 👉 Run `/agent-os:write-spec` to generate the detailed specification document.
 ```

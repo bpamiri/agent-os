@@ -23,7 +23,7 @@ Spec initialized successfully!
 ✅ Requirements gathered
 ✅ Visual assets: [Found X files / No files provided]
 
-👉 Run `/write-spec` to create the spec.md document.
+👉 Run `/agent-os:write-spec` to create the spec.md document.
 ```
 
 {{UNLESS standards_as_claude_code_skills}}
